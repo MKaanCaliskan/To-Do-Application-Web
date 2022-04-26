@@ -5,8 +5,91 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     
+</head>
+<body onload="dijitalSaat();">
+    <div class="frame">
+        <div class="header">
+            <div class="logo"> 
+                <img src="Image/1LOGO.png" alt="To-Do Logo">
+            </div>
+            <div class="banner">
+                <marquee class="info" >Paslanacağımıza, yıpranalaım !</marquee>
+            </div>
+            <div class="zemin">
+     
+                <table class="tabBlok" align="center" cellspacing="0" cellpadding="0" border="0">
+                    <tr><td class="dijitalSaat" id="dt"></td> 
+                        <td>
+                            <table cellpadding="0" cellspacing="0" border="0">
+         
+                                <tr><td class="saat" id="dt_saat"></td></tr>
+         
+                                
+                                <tr><td class="saat" id="dt_saniye"></td></tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+      </div>
+    </div>
+    <script src="js/clock.js"></script>
+    <div class="Task "> 
+        <div class="border">
+            <input placeholder="Yapılacak birşey yaz" type="text" id="txttodo" class="txt" />
+            <div class="radios">
+                <ul style="list-style-type:none;">
+                    <li> <input type="radio" id="rdb1"class="rdb" value="3" name="Severity" /> <span class="high"> Yüksek </span></li>
+                    <li><input type="radio" id="rdb2" class="rdbtwo"  value="3" name="Severity" /> <span class="high" >Orta </span> </li>
+                    <li><input type="radio" id="rdb3" class="rdbthree" value="3" name="Severity" />  <span class="high"> Düşük </span></li>
+                 </ul>  
+           
+            </div>
+            <button class="btn" id="btnfirst"><i id="logo" class="fa fa-check" aria-hidden="true"></i></button>
+            <em id="em-list">Bu alan zorunlu *</em>
+            
+        </div>
+
+    </div>
+    <div class="Container ">
+        <div class="ToDo">
+            <h3 class="h3">Yapılacak Listesi </h3>
+            
+           
+            <ul id="incomplete-tasks">
+                <li><input type="checkbox"><label>Örnek yapılacak</label></li>
+            </ul>
+        </div>
+        <div class="buttonremove"> 
+            <ul>
+                <li><button class="btn2" id="add-btn" ><i id="arrow" class="fa fa-arrow-right"></i></button></li>
+                <li><button class="btn3"id="remove-btn" ><i id="arrow" class="fa fa-arrow-left"></i></button></li>
+            </ul>
+        </div>
+  
+        <div class="InProgress">
+            <div class="ProgressList">
+                <ul id="progress-tasks">
+                    <li><input type="checkbox" ><label>Deneme</label></li>
+                </ul>    
+            </div>
+        </div>
+        <div class="buttonremoves"> 
+            <ul>
+                <li><button class="btn2" onclick="addnext()" ><i id="arrow" class="fa fa-arrow-right"></i></button></li>
+                <li><button class="btn3"><i id="arrow" class="fa fa-arrow-left"></i></button></button></li>
+            </ul>
+        </div>
+       
+        <div class="Complated">
+            <div class="ComplatedList">
+
+            </div>Completed</div>
+    </div>
+    <script src="js/Todo.js"></script>
 </body>
 </html>
