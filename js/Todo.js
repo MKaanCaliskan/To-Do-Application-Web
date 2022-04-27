@@ -27,6 +27,12 @@ var addTask=function(){
 
 addButton.onclick=addTask;
 
-function addnext(){
- 
-}
+/*document.getElementById('select').onclick = function() {
+    var checkboxes = document.getElementsByName('vehicle');
+    for (var checkbox of checkboxes)
+    {
+        if (checkbox.checked) {
+            document.body.append(checkbox.value + ' ');
+        }
+    }
+}*/

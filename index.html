@@ -7,7 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
     
 </head>
 <body onload="dijitalSaat();">
@@ -58,10 +59,7 @@
     <div class="Container ">
         <div class="ToDo">
             <h3 class="h3">Yapılacak Listesi </h3>
-            
-           
             <ul id="incomplete-tasks">
-                <li><input type="checkbox"><label>Örnek yapılacak</label></li>
             </ul>
         </div>
         <div class="buttonremove"> 
@@ -73,23 +71,26 @@
   
         <div class="InProgress">
             <div class="ProgressList">
+                <h3 class="h3">Devam Edenler </h3>
                 <ul id="progress-tasks">
-                    <li><input type="checkbox" ><label>Deneme</label></li>
                 </ul>    
             </div>
         </div>
         <div class="buttonremoves"> 
             <ul>
-                <li><button class="btn2" onclick="addnext()" ><i id="arrow" class="fa fa-arrow-right"></i></button></li>
-                <li><button class="btn3"><i id="arrow" class="fa fa-arrow-left"></i></button></button></li>
+                <li><button class="btn2" id="select"><i id="arrow" class="fa fa-arrow-right"></i></button></li>
+                <li><button class="btn3" id="selectremove"><i id="arrow" class="fa fa-arrow-left"></i></button></button></li>
             </ul>
         </div>
        
         <div class="Complated">
-            <div class="ComplatedList">
+           
+            <h3 class="h3">Tamamlananlar </h3>
+            <ul id="completed-tasks"></ul>  
 
-            </div>Completed</div>
+        </div>
     </div>
     <script src="js/Todo.js"></script>
+    <script src="js/jq.js"></script>
 </body>
 </html>
