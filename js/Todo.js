@@ -1,15 +1,16 @@
 var taskInput=document.getElementById("txttodo");
 var addButton=document.getElementsByTagName("button")[0];
 var incompleteTaskHolder=document.getElementById("incomplete-tasks")
-
+const emUserElement = document.getElementById("em-user");
 
 
 var createNewTaskElement=function(taskString){
 
+
 	var listItem=document.createElement("li");
 	var checkBox=document.createElement("input");
 	var label=document.createElement("label");
-  label.innerText=taskString;
+    label.innerText=taskString;
 	checkBox.type="checkbox";
 	listItem.appendChild(checkBox);
 	listItem.appendChild(label);
@@ -18,6 +19,9 @@ var createNewTaskElement=function(taskString){
 }
 
 var addTask=function(){
+
+
+	
 	console.log("Add Task...");
 	var listItem=createNewTaskElement(taskInput.value);
 	incompleteTaskHolder.appendChild(listItem);
@@ -27,12 +31,3 @@ var addTask=function(){
 
 addButton.onclick=addTask;
 
-/*document.getElementById('select').onclick = function() {
-    var checkboxes = document.getElementsByName('vehicle');
-    for (var checkbox of checkboxes)
-    {
-        if (checkbox.checked) {
-            document.body.append(checkbox.value + ' ');
-        }
-    }
-}*/
